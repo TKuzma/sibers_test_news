@@ -1,0 +1,18 @@
+1. Create database using MySQL (ex : CREATE DATABASE sibers_news;);
+3. Open sibers/test_news/settings.py;
+4. Enter your MySQL user 'user' and 'password' in 'DATABASES', fill 'name' field, then save file;
+5. Open directory with file named 'manage.py' in cmd/bash (../sibers/test_news);
+6. Run command 'python manage.py migrate' (python3 in bash);
+7. Run command 'python manage.py runserver' (or python3 in bash);
+8. Copy http://server_ip from cmd/bash (it is probably going to be http://127.0.0.1:8000/);
+9. Paste name from 8th par. to adress bar in your browser;
+10. Add /news/add_article at the end of adress bar (http://127.0.0.1:8000/news/add_article);
+11. Create new article in form (ex : 'First article', 'First text');
+12. Go to http://127.0.0.1:8000/news and check that article was added (refresh /news page if needed);
+
+ If you have MySQL editor (MySQL workbench, dbeaver, etc.)
+13. Open /sibers/test_news/mysql_files/test_data.sql in MySQL editor and run script;
+ If you don't have MySQL editor
+13. Open /sibers/test_news/mysql_files/test_data.txt, then copy -> paste text to mysql and run it;
+
+14. Go to http://127.0.0.1:8000/news and check rest functions (check that server still running, if not, do step 7).

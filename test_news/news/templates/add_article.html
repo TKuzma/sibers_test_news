@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url 'add_article' %}" method="POST">
+        {% csrf_token %}
+        {{ form.article_title }} <br>
+        {{ form.article_text }} <br>
+        <span>{{ error }}</span> <br>
+        <button type="submit">Add Article</button>
+    </form>
+{% endblock %}

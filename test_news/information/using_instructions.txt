@@ -1,0 +1,10 @@
+/news page
+
+* You can choose between 10, 20, 50 news articles per page by selecting needed number and tapping paginate button.
+* You can jump between pages by using next/previous first/last buttons.
+
+
+/news/add_article page
+
+To add article you need to fill two fields: first is to article name, second one is to article text. After all you need
+to tap 'submit' button. You will automatically jump to /news page and your arrticle will be added (refresh page if needed).

@@ -1,0 +1,3 @@
+username: superuser
+email: s@s.eu
+password: superuser

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+    {% block content %}
+
+    <form method="GET">
+        <select name="paginate_by" id="">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+        </select>
+        <input type="submit" value="Paginate">
+    </form>
+
+    
+    {% for n in DataPaginated %}
+            <h2><a href="">{{ n.article_title }}</a></h2>
+            <p>{{ n.article_text }}</p>
+            <em>{{ n.article_pub_date }}</em>
+    {% endfor %}
+
+    <div>
+        <span>
+            {% if DataPaginated.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ DataPaginated.previous_page_number }}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ DataPaginated.number }} of {{ DataPaginated.paginator.num_pages }}.
+            </span>
+    
+            {% if DataPaginated.has_next %}
+                <a href="?page={{ DataPaginated.next_page_number }}">next</a>
+                <a href="?page={{ DataPaginated.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+{% endblock %}
